@@ -37,6 +37,11 @@
       <url>git@github.com:rogeriogentil/academis.git</url>
    </scm>
    
+   <ciManagement>
+      <system>Travis CI</system>
+      <url>https://travis-ci.org/rogeriogentil/academis</url>
+   </ciManagement>
+   
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>		
    </properties>
