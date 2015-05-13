@@ -1,2 +1,6 @@
 .project
 .settings/
+/academis-ejb/nb-configuration.xml
+/academis-ejb/target/
+/academis-web/target/
+/target/
