@@ -3,3 +3,10 @@ jdk:
   - oraclejdk8
   - oraclejdk7
   - openjdk7
+install: 
+  - cd ./academis-ejb
+  - mvn clean install
+  - cd ..
+  - cd ./academis-web
+  - mvn clean install
+  - cd ..
