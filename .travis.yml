@@ -1,4 +1,7 @@
 language: java
+notifications:
+  email:
+    - rogerio_gentil@yahoo.com.br
 jdk:
   - oraclejdk8
   - oraclejdk7
