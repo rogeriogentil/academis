@@ -1,3 +1,3 @@
 # Academis
-## Sistema acadêmico livre.
+## Sistema acadêmico de código aberto.
 
