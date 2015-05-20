@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
 <html lang="pt-br"
-   xmlns="http://www.w3.org/1999/xhtml"
-   xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
    <h:head>      
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,9 +10,43 @@
       <title>Academis</title>
    </h:head>
    <h:body>
-      <header>
-         <h1>Academis</h1>
-         <h2>Sistema Acadêmico Livre</h2>
-      </header>
+      <div class="container-fluid">
+         <header class="row">
+            <h1 class="text-center">Academis</h1>
+            <h2 class="text-center">Sistema Acadêmico Livre</h2>
+         </header>
+
+         <section class="row">
+            <article class="col-sm-8">
+               O <strong>Academis</strong> é um sistema acadêmico de código aberto que utiliza
+               tecnologias <em>open source</em> e está sendo desenvolvido para pequenas 
+               instituições de ensino superior brasileiras.
+            </article>
+            
+            <aside class="col-sm-4">
+               <h:form id="form-login" class="form-horizontal">
+                  <div class="form-group">
+                     <label for="usuario" class="control-label col-sm-3">Usuário</label>
+                     <div class="col-sm-9">
+                        <input id="usuario" type="text" class="form-control" placeholder="Usuário" value="" />
+                     </div>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="senha" class="control-label col-sm-3">Senha</label>
+                     <div class="col-sm-9">
+                        <input id="senha" type="password" class="form-control" placeholder="Senha" value="" />
+                     </div>
+                  </div>                  
+
+                  <div class="form-group">
+                     <div class="col-sm-offset-3 col-sm-9">
+                        <button id="login-btn" type="submit" class="btn btn-primary">Entrar</button>
+                     </div>
+                  </div>
+               </h:form>
+            </aside>
+         </section>
+      </div>
    </h:body>
 </html>
