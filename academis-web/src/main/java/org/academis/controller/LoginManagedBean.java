@@ -1,13 +1,13 @@
 package org.academis.controller;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 
 /**
  *
  * @author Rogerio J. Gentil <rogerio_gentil@yahoo.com.br>
  */
-@ManagedBean(name = "loginManagedBean")
+@Named("loginManagedBean")
 @RequestScoped
 public class LoginManagedBean {
 
@@ -17,7 +17,7 @@ public class LoginManagedBean {
 
    public LoginManagedBean() {
    }
-   
+
    public String getUsuario() {
       return usuario;
    }
