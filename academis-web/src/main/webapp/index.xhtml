@@ -28,20 +28,23 @@
                   <div class="form-group">
                      <label for="usuario" class="control-label col-sm-3">Usuário</label>
                      <div class="col-sm-9">
-                        <input id="usuario" type="text" class="form-control" placeholder="Usuário" value="" />
+                        <input id="usuario" type="text" class="form-control" placeholder="Usuário" 
+                               value="#{loginManagedBean.usuario}" />
                      </div>
                   </div>
 
                   <div class="form-group">
                      <label for="senha" class="control-label col-sm-3">Senha</label>
                      <div class="col-sm-9">
-                        <input id="senha" type="password" class="form-control" placeholder="Senha" value="" />
+                        <input id="senha" type="password" class="form-control" placeholder="Senha" 
+                               value="#{loginManagedBean.senha}" />
                      </div>
-                  </div>                  
+                  </div>
 
                   <div class="form-group">
                      <div class="col-sm-offset-3 col-sm-9">
-                        <button id="login-btn" type="submit" class="btn btn-primary">Entrar</button>
+                        <h:commandButton id="login-btn" type="submit" class="btn btn-primary" value="Entrar" 
+                                         action="#{loginManagedBean.entrar}" />
                      </div>
                   </div>
                </h:form>
