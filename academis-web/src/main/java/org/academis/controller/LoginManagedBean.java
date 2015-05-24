@@ -12,6 +12,7 @@ import javax.inject.Named;
 public class LoginManagedBean {
 
    private static final String PRINCIPAL = "principal";
+   private static final String INDEX = "index";
    private String usuario;
    private String senha;
 
@@ -36,5 +37,9 @@ public class LoginManagedBean {
 
    public String entrar() {
       return PRINCIPAL;
+   }
+   
+   public String sair() {
+      return INDEX;
    }
 }
