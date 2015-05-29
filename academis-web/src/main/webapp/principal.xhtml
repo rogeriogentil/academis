@@ -7,29 +7,58 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <h:outputStylesheet library="css" name="bootstrap.min.css" />
+      <h:outputStylesheet library="css" name="estilos.css" />
+      <h:outputScript library="js" name="jquery.min.js" />
+      <h:outputScript library="js" name="bootstrap.min.js" />
       <title>Academis</title>
    </h:head>
    <h:body>
       <div class="container-fluid">
-         <header class="row">
-            <h1>Principal</h1>
-         </header>
+         <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <h:link id="inicio-link" value="Início" class="navbar-brand" outcome="principal.xhtml" />
+               </div>
+
+               <h:form id="menu-form" class="navbar-form navbar-right">
+
+                  <h:commandButton id="sair-btn" class="btn btn-default navbar-btn" value="Sair" 
+                                   action="#{loginManagedBean.sair}" />
+
+               </h:form>
+            </div>
+         </nav>         
 
          <section class="row">
-            <nav class="navbar navbar-default">
-               <div class="container-fluid">
-                  <div class="navbar-header">
-                     <h:link id="inicio-link" value="Início" class="navbar-brand" outcome="principal.xhtml" />
-                  </div>
-
-                  <h:form id="menu-form" class="navbar-form navbar-right">
-                     
-                        <h:commandButton id="sair-btn" class="btn btn-default navbar-btn" value="Sair" 
-                                         action="#{loginManagedBean.sair}" />
-                     
-                  </h:form>
-               </div>
+            <nav class="col-md-2">
+               <ul class="list-group">
+                  <li class="list-group-item">
+                     <a href="#" data-toggle="collapse">Matrículas</a>
+                  </li>
+                  <li class="list-group-item">
+                     <a href="#sub-menu-cadastros" data-toggle="collapse" 
+                        aria-expanded="false" aria-controls="sub-menu-cadastros">
+                        Cadastros
+                     </a>
+                     <ul id="sub-menu-cadastros" class="collapse">
+                        <li>Curso</li>
+                        <li>Matriz Curricular</li>
+                        <li>Currículo</li>
+                     </ul>
+                  </li>
+                  
+               </ul>               
             </nav>
+
+            <div class="col-md-10">
+               <header>
+                  <h1>Principal</h1>
+               </header>
+               
+               <div>
+                  <p>Conteúdo</p>
+               </div>               
+            </div>
          </section>
       </div>
    </h:body>
