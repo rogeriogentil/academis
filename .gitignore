@@ -1,8 +1,9 @@
+target/
+.classpath
 .project
-.settings/
-/nb-configuration.xml
-/target/
-/academis-ejb/target/
-/academis-ejb/nb-configuration.xml
-/academis-web/target/
-/academis-web/nb-configuration.xml
+.settings
+nb-configuration.xml
+nbactions.xml
+nbproject/private
+.idea
+*.iml
