@@ -1,14 +1,12 @@
 package org.academis.controller;
 
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
+import javax.faces.bean.ManagedBean;
 
 /**
  *
  * @author Rogerio J. Gentil <rogerio_gentil@yahoo.com.br>
  */
-@Named("loginManagedBean")
-@RequestScoped
+@ManagedBean
 public class LoginManagedBean {
 
    private static final String PRINCIPAL = "principal";
@@ -36,6 +34,7 @@ public class LoginManagedBean {
    }
 
    public String entrar() {
+      System.out.println(PRINCIPAL);
       return PRINCIPAL;
    }
    
