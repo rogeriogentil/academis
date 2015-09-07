@@ -92,11 +92,11 @@ public class Pais implements Serializable {
 		this.denominacaoDeNacionalidade = denominacaoDeNacionalidade;
 	}
 
-	public String getDdi() {
+	public String getDDI() {
 		return ddi;
 	}
 
-	public void setDdi(String ddi) {
+	public void setDDI(String ddi) {
 		this.ddi = ddi;
 	}
 
