@@ -15,4 +15,20 @@ public class NacionalidadePK implements Serializable {
 
 	@Column(name = "pais_id")
 	private long paisId;
+
+	public long getPessoaId() {
+		return pessoaId;
+	}
+
+	public void setPessoaId(long pessoaId) {
+		this.pessoaId = pessoaId;
+	}
+
+	public long getPaisId() {
+		return paisId;
+	}
+
+	public void setPaisId(long paisId) {
+		this.paisId = paisId;
+	}
 }

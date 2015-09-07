@@ -1,4 +1,4 @@
-package org.academis.persistencia.entidade;
+package org.academis.persistencia.tipo;
 
 public enum TipoNacionalidade {
 
