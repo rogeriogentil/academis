@@ -9,6 +9,24 @@
 	<packaging>war</packaging>
 
 	<name>Academis</name>
+	<inceptionYear>2015</inceptionYear>
+
+	<developers>
+		<developer>
+			<id>1</id>
+			<name>Rogerio J. Gentil</name>
+			<email>rogerio_gentil@yahoo.com.br</email>			
+		</developer>
+	</developers>
+	
+	<scm>		
+		<url>https://github.com/rogeriogentil/academis</url>
+	</scm>
+	
+	<ciManagement>
+		<url>https://travis-ci.org/rogeriogentil/academis</url>
+		<system>Travis CI</system>
+	</ciManagement>
 
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -36,14 +54,14 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>5.0.1.Final</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>${postgresql.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -96,10 +114,11 @@
 								</artifactItem>
 							</artifactItems>
 						</configuration>
-					</execution>					
+					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
