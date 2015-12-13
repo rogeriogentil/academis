@@ -20,7 +20,8 @@ import javax.validation.constraints.Size;
 @Table(name = "pais")
 @NamedQueries({
 	@NamedQuery(name = "Pais.obterTodos", query = "SELECT p FROM Pais p"),
-	@NamedQuery(name = "Pais.obterPorId", query = "SELECT p FROM Pais p WHERE p.id = id")
+	@NamedQuery(name = "Pais.obterPorId", query = "SELECT p FROM Pais p WHERE p.id = id"),
+	@NamedQuery(name = "Pais.obterPorSigla", query = "SELECT p FROM Pais p WHERE p.sigla = sigla")
 })
 public class Pais implements Serializable {
 
