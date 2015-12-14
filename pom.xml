@@ -15,14 +15,14 @@
 		<developer>
 			<id>1</id>
 			<name>Rogerio J. Gentil</name>
-			<email>rogerio_gentil@yahoo.com.br</email>			
+			<email>rogerio_gentil@yahoo.com.br</email>
 		</developer>
 	</developers>
-	
-	<scm>		
+
+	<scm>
 		<url>https://github.com/rogeriogentil/academis</url>
 	</scm>
-	
+
 	<ciManagement>
 		<url>https://travis-ci.org/rogeriogentil/academis</url>
 		<system>Travis CI</system>
@@ -31,6 +31,8 @@
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<flywaydb.version>3.2.1</flywaydb.version>
 		<jsf2.version>2.2.11</jsf2.version>
 		<postgresql.version>9.4-1201-jdbc41</postgresql.version>
 	</properties>
@@ -70,6 +72,56 @@
 		</dependency>
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.flywaydb</groupId>
+						<artifactId>flyway-maven-plugin</artifactId>
+						<version>${flywaydb.version}</version>
+						<configuration>
+							<url>jdbc:postgresql://localhost:5433/academis</url>
+							<configFile>src/main/resources/flyway.properties</configFile>
+						</configuration>
+						<dependencies>
+							<dependency>
+								<groupId>org.postgresql</groupId>
+								<artifactId>postgresql</artifactId>
+								<version>${postgresql.version}</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	
+		<profile>
+			<id>test</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.flywaydb</groupId>
+						<artifactId>flyway-maven-plugin</artifactId>
+						<version>${flywaydb.version}</version>
+						<configuration>
+							<url>jdbc:postgresql://localhost:5432/academis</url>
+							<user>postgres</user>
+						</configuration>
+						<dependencies>
+							<dependency>
+								<groupId>org.postgresql</groupId>
+								<artifactId>postgresql</artifactId>
+								<version>${postgresql.version}</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -84,6 +136,7 @@
 					</compilerArguments>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -92,6 +145,7 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -119,6 +173,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

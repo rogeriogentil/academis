@@ -2,11 +2,18 @@ language: java
 notifications:
   email:
     - rogerio_gentil@yahoo.com.br
+
 jdk:
   - oraclejdk8
   - oraclejdk7
   - openjdk7
+
 addons:
   postgresql: "9.4"
+
+services:
+  - postgresql
+
 before_script:
   - psql -c 'create database academis' -U postgres
+  - mvn flyway:migrate -P test
