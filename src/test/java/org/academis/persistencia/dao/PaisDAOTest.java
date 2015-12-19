@@ -64,4 +64,14 @@ public class PaisDAOTest {
 		paisDAO.remover(pais);
 		tx.commit();
 	}
+	
+	@Test
+	public void deveObterUmPaisPelaSigla() {
+		tx.begin();
+		paisDAO.salvar(pais);
+		tx.commit();
+		
+		Pais pais = paisDAO.obter("BR");
+		assertEquals("Brasil", pais.getNome());
+	}
 }

@@ -82,7 +82,7 @@
 						<artifactId>flyway-maven-plugin</artifactId>
 						<version>${flywaydb.version}</version>
 						<configuration>
-							<url>jdbc:postgresql://localhost:5433/academis</url>
+							<url>jdbc:postgresql://localhost:5432/academis</url>
 							<configFile>src/main/resources/flyway.properties</configFile>
 						</configuration>
 						<dependencies>
